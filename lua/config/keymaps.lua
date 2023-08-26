@@ -15,5 +15,12 @@ local function map(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, opts)
   end
 end
-
-map('i','jj', '<Esc>')
+-- exit insert mode with jj
+map('i', 'jj', '<Esc>')
+-- Move and center the cursor
+map('n', '<C-d>', '<C-d>zz')
+map('n', '<C-u>', '<C-u>zz')
+map('n', '<C-f>', '<C-f>zz')
+map('v', '<C-d>', '<C-d>zz')
+map('v', '<C-u>', '<C-u>zz')
+map('v', '<C-f>', '<C-f>zz')
