@@ -24,3 +24,8 @@ map('n', '<C-f>', '<C-f>zz')
 map('v', '<C-d>', '<C-d>zz')
 map('v', '<C-u>', '<C-u>zz')
 map('v', '<C-f>', '<C-f>zz')
+-- Debugging
+map('n', '<leader>d5', function() require("dap").continue() end, { desc = "continue" })
+map('n', '<leader>d0', function() require("dap").step_over() end, { desc = "step over" })
+map('n', '<leader>d-', function() require("dap").step_into() end, { desc = "step into" })
+map('n', '<leader>d=', function() require("dap").step_out() end, { desc = "step out" })
