@@ -29,3 +29,5 @@ map('n', '<leader>d5', function() require("dap").continue() end, { desc = "conti
 map('n', '<leader>d0', function() require("dap").step_over() end, { desc = "step over" })
 map('n', '<leader>d-', function() require("dap").step_into() end, { desc = "step into" })
 map('n', '<leader>d=', function() require("dap").step_out() end, { desc = "step out" })
+-- Paste the last yanked text
+map({ 'n', 'o' }, '<leader>p', '"0p', { desc = "paste last yanked text" })
