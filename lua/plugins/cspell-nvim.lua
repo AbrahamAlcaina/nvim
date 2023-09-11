@@ -6,7 +6,7 @@ return {
     opts = function(_, opts)
       local nls = require("null-ls")
       local cspell = require('cspell')
-      local cspell_config = vim.fn.expand("$HOME/cspell.json")
+      local cspell_config = vim.fn.expand("$HOME/.config/cspell.json")
       local shared_config = {
         find_json = function()
           return cspell_config
