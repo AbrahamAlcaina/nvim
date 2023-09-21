@@ -40,3 +40,9 @@ end, { desc = "step out" })
 -- Paste the last yanked text
 map({ "n", "o" }, "<leader>p", '"0p', { desc = "paste last yanked text" })
 map({ "n", "o" }, "<leader>P", '"0P', { desc = "paste last yanked text" })
+--inlay
+if vim.lsp.inlay_hint then
+  vim.keymap.set('n', '<leader>ci', function()
+    vim.lsp.inlay_hint(0, nil)
+  end, { desc = 'Toggle Inlay Hints' })
+end
