@@ -17,4 +17,3 @@ return {
         cspell.code_actions.with({ config = shared_config })
       })
     end,
-  }, }
