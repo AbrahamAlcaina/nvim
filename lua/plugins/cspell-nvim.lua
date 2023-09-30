@@ -1,6 +1,6 @@
 return {
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     event = "BufReadPre",
     dependencies = { "davidmh/cspell.nvim" },
     opts = function(_, opts)
