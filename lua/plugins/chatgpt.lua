@@ -1,16 +1,7 @@
-local wk = require("which-key")
--- As an example, we will create the following mappings:
---  * <leader>ff find files
---  * <leader>fr show recent files
---  * <leader>fb Foobar
--- we'll document:
---  * <leader>fn new file
---  * <leader>fe edit file
--- and hide <leader>1
+local whichKey = require("which-key")
 
-wk.register({
+whichKey.register({
   g = {
-
     name = "ChatGPT",
     c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
     e = { "<cd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },

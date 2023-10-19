@@ -34,23 +34,15 @@ end, { desc = "step over" })
 map("n", "<leader>d-", function()
   require("dap").step_into()
 end, { desc = "step into" })
-map("n", "<leader>d=", function()
+map("n, "<leader>d=", function()
   require("dap").step_out()
 end, { desc = "step out" })
 -- Paste the last yanked text
 map({ "n", "o" }, "<leader>p", '"0p', { desc = "paste last yanked text" })
 map({ "n", "o" }, "<leader>P", '"0P', { desc = "paste last yanked text" })
--- Code inlay
+--inlay
 if vim.lsp.inlay_hint then
   vim.keymap.set('n', '<leader>ci', function()
     vim.lsp.inlay_hint(0, nil)
   end, { desc = 'Toggle Inlay Hints' })
-end
--- tmux fix
--- vim-tmux-navigator
-if os.getenv("TMUX") then
-  map("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>")
-  map("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>")
-  map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
-  map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
 end
