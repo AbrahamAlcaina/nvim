@@ -54,3 +54,9 @@ if os.getenv("TMUX") then
   map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
   map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
 end
+-- New line with indent
+-- nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
+-- nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
+map("n", "<CR>", 'o<Esc>')
+map("n", "<leader>o", 'o<Esc>')
+map("n", "<leader>O", 'o<Esc>')
