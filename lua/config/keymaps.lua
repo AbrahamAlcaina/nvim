@@ -43,7 +43,7 @@ map({ "n", "o" }, "<leader>P", '"0P', { desc = "paste last yanked text" })
 -- Code inlay
 if vim.lsp.inlay_hint then
   vim.keymap.set('n', '<leader>ci', function()
-    vim.lsp.inlay_hint(0, nil)
+    vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
   end, { desc = 'Toggle Inlay Hints' })
 end
 -- tmux fix
