@@ -1,8 +1,8 @@
 -- for now disable it, testing tokonight
-if true then
-  return {}
-end
-
+-- if true then
+--   return {}
+-- end
+--
 return {
   {
     -- Solarize color scheme
@@ -11,5 +11,11 @@ return {
     config = function()
       vim.opt.background = "light"
     end,
-  },
+  }, -- Configure LazyVim to load gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "solarized",
+    },
+  }
 }
