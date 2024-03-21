@@ -59,4 +59,4 @@ end
 -- nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
 map("n", "<CR>", 'o<Esc>')
 map("n", "<leader>o", 'o<Esc>')
-map("n", "<leader>O", 'o<Esc>')
+map("n", "<leader>O", 'O<Esc>')
