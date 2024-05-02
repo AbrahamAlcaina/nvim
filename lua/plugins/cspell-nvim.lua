@@ -13,7 +13,11 @@ return {
         end,
       }
       opts.sources = vim.list_extend(opts.sources or {}, {
-        cspell.diagnostics.with({ config = shared_config }),
+        cspell.diagnostics.with({ config = shared_config }).with({
+          diagnostics_postprocess = function(diagnostic)
+            diagnostic.severity = vim.diagnostic.severity["WARN"]
+          end
+        }),
         cspell.code_actions.with({ config = shared_config }),
       })
     end,
