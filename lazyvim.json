@@ -2,6 +2,7 @@
   "extras": [
 
     "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.lang.haskell",
   ],
   "news": {
     "NEWS.md": "2123"
