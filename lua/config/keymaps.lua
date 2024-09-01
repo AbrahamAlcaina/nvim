@@ -38,12 +38,12 @@ map("n", "<leader>d=", function()
   require("dap").step_out()
 end, { desc = "step out" })
 -- Paste the last yanked text
-map({ "n", "o" }, "<leader>p", '"0p', { desc = "paste last yanked text" })
-map({ "n", "o" }, "<leader>P", '"0P', { desc = "paste last yanked text" })
+map({ "n", "o", "v" }, "<leader>p", '"0p', { desc = "paste last yanked text" })
+map({ "n", "o", "v" }, "<leader>P", '"0P', { desc = "paste last yanked text" })
 -- Code inlay
 if vim.lsp.inlay_hint then
   vim.keymap.set('n', '<leader>ci', function()
-    vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
   end, { desc = 'Toggle Inlay Hints' })
 end
 -- tmux fix
