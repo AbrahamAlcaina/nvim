@@ -1,3 +1,9 @@
+
+if true then
+  return {}
+end
+
+
 return {
   "dmmulroy/tsc.nvim",
   config = function()
